@@ -1,0 +1,6 @@
+/* pages/radish/radish.wxss */
+input{
+  border: 1px solid blue;
+  display: inline-flex;
+  width: 740rpx;
+}

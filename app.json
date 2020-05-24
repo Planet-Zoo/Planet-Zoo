@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/animal/animal",
+    "pages/collection/collection",
+    "pages/flower/flower",
+    "pages/radish/radish",
+
+    "pages/amimalDetail/animalDetail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/animal/animal",
+        "text": "岛民"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "text": "收集品"
+      },
+      {
+        "pagePath": "pages/flower/flower",
+        "text": "花朵杂交"
+      },
+      {
+        "pagePath": "pages/radish/radish",
+        "text": "大头菜"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

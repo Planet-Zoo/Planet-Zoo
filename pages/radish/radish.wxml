@@ -1,0 +1,4 @@
+<view>输入大头菜价格</view>
+<input></input>
+<button>价格预测</button>
+<view>下面输出个结果啥的</view>

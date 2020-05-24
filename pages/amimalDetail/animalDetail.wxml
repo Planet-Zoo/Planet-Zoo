@@ -1,0 +1,7 @@
+<view>
+  <image class="photo" src="/img/阿龙.png"></image>
+  <view>姓名:{{name}}</view>
+  <view>性别:{{sex}}</view>
+  <view>种族:{{specie}}</view>
+  <view>口头禅:{{tag}}</view>
+</view>

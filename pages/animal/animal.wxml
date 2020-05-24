@@ -1,0 +1,9 @@
+<view>
+  <input></input>
+  <text>搜索</text>
+</view>
+
+<view class="animal" bindtap="along">
+  <image class="animalPhoto" src="/img/阿龙.png"></image>
+  <text class="animalName">阿龙</text>
+</view>

@@ -1,0 +1,4 @@
+/* pages/amimalDetail/animalDetail.wxss */
+.photo{
+  background-color: yellow;
+}

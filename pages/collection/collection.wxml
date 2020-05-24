@@ -1,0 +1,13 @@
+<view>
+  <view class="head">鱼类</view>
+  <view class="head">昆虫</view>
+  <view class="head">化石</view>
+  <view class="head">艺术品</view>
+</view>
+
+<view>
+  <input></input>
+  <text>搜索</text>
+</view>
+
+<view>下面跟前面那个差不多</view>

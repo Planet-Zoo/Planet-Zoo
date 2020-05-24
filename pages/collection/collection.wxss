@@ -1,0 +1,11 @@
+/* pages/collection/collection.wxss */
+.head{
+  width: 160rpx;
+  display: inline-flex;
+}
+
+input{
+  border: 1px solid blue;
+  display: inline-flex;
+  width: 650rpx;
+}
