@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:"阿龙",
+    name:"lbg",
     sex:"男",
     specie:"鳄鱼",
     tag:"鱼跃龙门"
