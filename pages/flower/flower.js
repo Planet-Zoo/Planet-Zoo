@@ -69,11 +69,12 @@ Page({
           id: 5,
           name: "黑色"
         }
+    
       ],
       [{
         id: 0,
         name: "红色"
-      },
+        },
         {
           id: 1,
           name: "黄色"
@@ -98,7 +99,12 @@ Page({
     ],
     flowerIndex: [0, 0, 0],
   },
-
+  bindMultiPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      flowerIndex: e.detail.value
+    })
+  },
   bindMultiPickerColumnChange: function (e) {
     console.log('列', e.detail.column, '，值', e.detail.value);
     var data = {
@@ -106,24 +112,48 @@ Page({
       flowerIndex: this.data.flowerIndex
     };
     data.flowerIndex[e.detail.column] = e.detail.value;
-    if(e.detail.column==0){
-      switch(e.detail.value){
-        case 0:
-          data.flowerArray[1] = ["红色", "黄色", "白色", "橙色", "粉色", "黑色"];
-          data.flowerArray[2] = ["红色", "黄色", "白色", "橙色", "粉色", "黑色"];
-          break;
-        case 1:
-          data.flowerArray[1] = ["还没写"];
-          data.flowerArray[2] = ["还没写"];
-          break;
-        default:
-          data.flowerArray[1] = ["还没写"];
-          data.flowerArray[2] = ["还没写"];
-      }
+    switch(e.detail.column){
+      case 0:
+        switch(data.flowerIndex[0]){
+          case 0:
+            data.flowerArray[1] = ["红色", "黄色", "白色", "橙色", "粉色", "黑色"];
+            data.flowerArray[2] = ["红色", "黄色", "白色", "橙色", "粉色", "黑色"];
+            break;
+          case 1:
+            data.flowerArray[1] = ["红色", "黄色", "白色", "紫色", "粉色", "绿色","黄色二代"];
+            data.flowerArray[2] = ["红色", "黄色", "白色", "紫色", "粉色", "绿色","黄色二代"];
+            break;
+          case 2:
+            data.flowerArray[1] = ["红色", "黄色", "白色", "紫色", "粉色", "蓝色","金色","黑色","橘色","红色二代"];
+            data.flowerArray[2] = ["红色", "黄色", "白色", "紫色", "粉色", "蓝色","金色","黑色","橘色","红色二代"];
+            break;
+          case 3:
+            data.flowerArray[1] = ["红色", "蓝色", "白色", "紫色", "粉色", "橘色","粉色二代"];
+            data.flowerArray[2] = ["红色", "蓝色", "白色", "紫色", "粉色", "橘色","粉色二代"];
+            break;
+          case 4:
+            data.flowerArray[1] = ["红色", "黄色", "白色", "橘色", "粉色", "黑色","紫色"];
+            data.flowerArray[2] = ["红色", "黄色", "白色", "橘色", "粉色", "黑色","紫色"];
+            break;
+          case 5:
+            data.flowerArray[1] = ["红色", "黄色", "白色", "橘色", "蓝色", "紫色","红色二代"];
+            data.flowerArray[2] = ["红色", "黄色", "白色", "橘色", "蓝色", "紫色","红色二代"];
+            break;
+          case 6:
+            data.flowerArray[1] = ["红色", "黄色", "白色", "橘色", "粉色", "蓝色","紫色"];
+            data.flowerArray[2] = ["红色", "黄色", "白色", "橘色", "粉色", "蓝色","紫色"];
+            break;
+          case 7:
+            data.flowerArray[1] = ["红色", "黄色", "白色", "橘色", "粉色", "黑色"];
+            data.flowerArray[2] = ["红色", "黄色", "白色", "橘色", "粉色", "黑色"];
+            break;
+       }
       data.flowerIndex[1]=0;
       data.flowerIndex[2]=0;
+      break;
     }
     this.setData(data);
+    console.log(data.flowerIndex);
   },
 
   zajiao:function(){
@@ -137,13 +167,118 @@ Page({
     let colour2 = this.data.flowerIndex[2];
     switch(type){
       case 0:
-        if(((colour1==0)&&(colour2==2))||((colour2==2)&&(colour1==0))){
+        if(((colour1==0)&&(colour2==2))||((colour1==2)&&(colour2==0))){
           data.answer = "粉色"
         }
-        else if (((colour1 == 0) && (colour2 == 1)) || ((colour2 == 1) && (colour1 == 0))) {
+        else if (((colour1 == 0) && (colour2 == 1)) || ((colour1 == 1) && (colour2 == 0))) {
           data.answer = "橙色"
         }
         else if ((colour1 == 3) && (colour2 == 3)){
+          data.answer = "黑色"
+        }
+        else{
+          data.answer = "无法杂交"
+        }
+        break;
+      case 1:
+        if((colour1==2)&&(colour2==2)){
+          data.answer = "紫色"
+        }else if(((colour1==0)&&(colour2==2))||((colour1==2)&&(colour2==0))){
+          data.answer = "粉色"
+        }else if(((colour1 ==0)&&(colour2==1)||(colour2==0)&&(colour1==1))){
+          data.answer = "黄色二代"
+         }else if((colour1==1)&&(colour2==1)){
+           data.answer = "绿色"
+         }else{
+           data.answer = "无法杂交"
+         }
+         break;
+      case 2:
+        if(colour1==2&&colour2==2){
+          data.answer = "紫色"
+        }else if((colour2==2&&colour1==0)||(colour1==2&&colour2==0)){
+          data.answer = "粉色"
+        }else if(colour2==0&&colour1==0){
+          data.answer = "黑色"
+        }else if((colour1==0&&colour2==1)||(colour2==0&&colour1==1)){
+          data.answer = "橘色"
+        }else if((colour1==8&&colour2==3)||(colour2==8&&colour1==3)){
+          data.answer = "红色二代"
+        }else if(colour2==9&&colour1==9){
+          data.answer = "蓝色"
+        }else if(colour1 == 7 && colour2 == 7){
+          data.answer = "金色"
+        }else{
+          data.answer = "无法杂交"
+        }
+        break;
+      case 3:
+        if(colour1 == 2 && colour2 == 2){
+          data.answer = "蓝色"
+        }else if((colour2 == 0 && colour1 == 5) || (colour1 == 0 && colour2 == 5)){
+          data.answer = "粉色"
+        }else if((colour2 ==1&&colour1==4)||(colour2==4&&colour1==1)){
+          data.answer = "粉色二代"
+        }else if(colour2==6&&colour1==6){
+          data.answer = "紫色"
+        }else {
+          data.answer = "无法杂交"
+        }
+        break;
+      case 4:
+        if((colour2==0&&colour1==2)||(colour2==2&&colour1==0)){
+          data.answer = "粉色"
+        }else if(colour2==0&&colour1==0){
+          data.answer = "黑色"
+        }else if((colour2==0&&colour1==1)||(colour2==1&&colour1==0)){
+          data.answer = "橘色"
+        }else if((colour2==3&&colour1==3)||(colour2==5&&colour1==5)){
+          data.answer = "紫色"
+        }else{
+          data.answer = "无法杂交"
+        }
+        break;
+      case 5:
+        if(colour2==2&&colour1==2){
+          data.answer = "蓝色"
+        }
+        else if((colour2==0&&colour1==1)||(colour2==1&&colour1==0)){
+          data.answer = "橘色"
+        }
+        else if((colour2==0&&colour1==4)||(colour2==4&&colour1==0)){
+          data.answer = "红色二代"
+        }
+        else if((colour2==4&&colour1==4)||(colour2==6&&colour1==6)){
+          data.answer = "紫色" 
+        }else{
+          data.answer = "无法杂交"
+        }
+        break;
+      case 6:
+        if(colour1 == 2&&colour2==2){
+          data.answer = "蓝色"
+        }
+        else if((colour1 == 2 && colour2==0)||(colour2==2&&colour1==0)){
+          data.answer = "粉色"
+        }
+        else if((colour2==0&&colour1==1)||(colour2==1&&colour1==0)){
+          data.answer = "橘色"
+        }
+        else if((colour2==3&&colour1==3)||(colour2==5&&colour1==5)){
+          data.answer = "紫色"
+        }
+        else{
+          data.answer = "无法杂交"
+        }
+        break;
+      case 7:
+        if((colour1==0&&colour2==2)||(colour1==2&&colour2==0)){
+          data.answer = "粉色"
+        }
+        else if((colour1==0&&colour2==1)||(colour1==1&&colour2==0)){
+          data.answer = "橘色"
+        }
+        else if((colour1==3&&colour2==3)||(colour1==0&&colour2==0)){
           data.answer = "黑色"
         }
         else{
