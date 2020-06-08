@@ -1,24 +1,60 @@
 /* pages/animal/animal.wxss */
 input{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
   border: 1px solid blue;
   display: inline-flex;
-  width: 650rpx;
+  width: 630rpx;
+}
+
+.animalContainer{
+  margin-top:15rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
 }
 
 .animal{
-  height: 70px;
-  width: 375rpx;
+  display: flex;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+  margin-right: 150rpx;
+  height: 190rpx;
+  width: 530rpx;
+  border-radius: 15rpx;
+  background-color: whitesmoke;
+}
+
+.animalPressed{
+  display: flex;
+  margin-top: 10rpx;
+  margin-left: 50rpx;
+  margin-right: 150rpx;
+  height: 190rpx;
+  width: 530rpx;
   background-color: gainsboro;
 }
 
 .animalPhoto{
-  height: 60px;
-  width:37.5px;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+  height: 160rpx;
+  width: 160rpx;
   display: inline-flex;
-  background-color: yellow;
+  background-color:#FFFF96;
 }
 
 .animalName{
-  font-size: 60px;
+  margin-top: 20rpx;
+  margin-left: 45rpx;
+  margin-right: 45rpx;
+  font-size: 45rpx;
   display: inline-flex;
+}
+.animalShortDescription{
+  margin-top: 10rpx;
+  margin-left: 45rpx;
+  font-size: 30rpx;
+  display: flex;
+  color: #5A5A5A;
 }

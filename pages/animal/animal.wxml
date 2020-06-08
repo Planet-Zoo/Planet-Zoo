@@ -2,8 +2,16 @@
   <input></input>
   <text>搜索</text>
 </view>
-
-<view class="animal" bindtap="along">
-  <image class="animalPhoto" src="/img/阿龙.png"></image>
-  <text class="animalName">阿龙</text>
+<view class="animalContainer">
+  <view class="animal" hover-class="animalPressed" bindtap="along">
+    <image class="animalPhoto" src="/img/阿龙.png"></image>
+    <view>
+      <text class="animalName">阿龙</text>
+      <text class="animalShortDescription">名叫阿龙的小鳄鱼</text>
+    </view>
+  </view>
+  <view class="animal" bindtap="along">
+    <image class="animalPhoto" src="/img/阿龙.png"></image>
+    <text class="animalName">猪锣</text>
+  </view>
 </view>
