@@ -1,17 +1,18 @@
-<view>
-  <input></input>
-  <text>搜索</text>
-</view>
-<view class="animalContainer">
-  <view class="animal" hover-class="animalPressed" bindtap="along">
-    <image class="animalPhoto" src="/img/阿龙.png"></image>
-    <view>
-      <text class="animalName">阿龙</text>
-      <text class="animalShortDescription">名叫阿龙的小鳄鱼</text>
-    </view>
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}rpx;">
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
   </view>
-  <view class="animal" bindtap="along">
-    <image class="animalPhoto" src="/img/阿龙.png"></image>
-    <text class="animalName">猪锣</text>
+  <view class="action">
+    <button class="cu-btn bg-gradual-green shadow-blur round">搜索</button>
+  </view>
+</view>  
+<view class="animalContainer">
+  <view wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" class="animal" hover-class="animalPressed" bindtap="along" data-id="{{idx}}">
+    <image class="animalPhoto" src="/img/{{item.name}}.png"></image>
+    <view>
+      <text class="animalName">{{item.name}}</text>
+      <text class="animalShortDescription">{{item.description}}</text>
+    </view>
   </view>
 </view>
