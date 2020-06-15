@@ -1,7 +1,15 @@
-<view>
-  <image class="photo" src="/img/阿龙.png"></image>
-  <view>姓名:{{name}}</view>
-  <view>性别:{{sex}}</view>
-  <view>种族:{{specie}}</view>
-  <view>口头禅:{{tag}}</view>
+<view class="animalFile">
+  <view class="photoTextWrapper">
+    <image class="photo" src="/img/{{name}}.png"></image>
+    <view class="textWrapper">
+      <view class="simpleTitle1"><text class="titleText">基础档案</text></view>
+      <view>[姓名] {{name}}</view>
+      <view>[性别] {{sex}}</view>
+      <view>[种族] {{specie}}</view>
+      <view>[口头禅] {{tag}}</view>
+    </view>
+  </view>
+  <view>
+    
+  </view>
 </view>

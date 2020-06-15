@@ -1,36 +1,25 @@
 /* pages/animal/animal.wxss */
-input{
-  margin-left: 10rpx;
-  margin-right: 10rpx;
-  border: 1px solid blue;
-  display: inline-flex;
-  width: 630rpx;
-}
 
 .animalContainer{
   margin-top:15rpx;
-  margin-left: 10rpx;
-  margin-right: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
 }
 
 .animal{
   display: flex;
-  margin-top: 10rpx;
-  margin-left: 50rpx;
-  margin-right: 150rpx;
-  height: 190rpx;
-  width: 530rpx;
-  border-radius: 15rpx;
+  margin-top: 30rpx;
+  height: 150rpx;
+  width: 710rpx;
+  border-radius: 20rpx;
   background-color: whitesmoke;
 }
 
 .animalPressed{
   display: flex;
-  margin-top: 10rpx;
-  margin-left: 50rpx;
-  margin-right: 150rpx;
-  height: 190rpx;
-  width: 530rpx;
+  margin-top: 30rpx;
+  height: 150rpx;
+  width: 710rpx;
   background-color: gainsboro;
 }
 
@@ -38,23 +27,95 @@ input{
   margin-left: 10rpx;
   margin-top: 10rpx;
   border-radius: 50%;
-  height: 160rpx;
-  width: 160rpx;
+  height: 140rpx;
+  width: 140rpx;
   display: inline-flex;
-  background-color:#FFFF96;
+  background-color:white;
 }
 
 .animalName{
   margin-top: 20rpx;
   margin-left: 45rpx;
   margin-right: 45rpx;
-  font-size: 45rpx;
+  font-size: 40rpx;
   display: inline-flex;
 }
 .animalShortDescription{
   margin-top: 10rpx;
   margin-left: 45rpx;
-  font-size: 30rpx;
+  font-size: 28rpx;
   display: flex;
-  color: #5A5A5A;
+  color: grey;
+}
+
+page {
+  padding-top: 100rpx;
+}
+
+.indexes {
+  position: relative;
+}
+
+.indexBar {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  padding: 20rpx 20rpx 20rpx 60rpx;
+  display: flex;
+  align-items: center;
+}
+
+.indexBar .indexBar-box {
+  width: 40rpx;
+  height: auto;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.1);
+  border-radius: 10rpx;
+}
+
+.indexBar-item {
+  flex: 1;
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #888;
+}
+
+movable-view.indexBar-item {
+  width: 40rpx;
+  height: 40rpx;
+  z-index: 9;
+  position: relative;
+}
+
+movable-view.indexBar-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 10rpx;
+  height: 20rpx;
+  width: 4rpx;
+  background-color: #f37b1d;
+}
+
+.indexToast {
+  position: fixed;
+  top: 0;
+  right: 80rpx;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  margin: auto;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 48rpx;
 }

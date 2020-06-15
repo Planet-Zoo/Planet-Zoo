@@ -5,17 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-    name:"lbg",
+    name:"阿龙",
     sex:"男",
     specie:"鳄鱼",
-    tag:"鱼跃龙门"
+    tag:"鱼跃龙门",
+    animalIndex: 0,
+    allAnimalInformation: [
+      {
+        name:"阿龙",
+        sex:"男",
+        specie: "鳄鱼",
+        tag:"鱼跃龙门"
+      },
+      {
+        name:"西施惠",
+        sex:"女",
+        specie:"狗",
+        tag:"未知",
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var app = getApp();
+    var index = app.globalData.animalIndex;
+    this.setData({
+      animalIndex: index,
+      name: this.data.allAnimalInformation[index].name,
+      sex: this.data.allAnimalInformation[index].sex,
+      specie: this.data.allAnimalInformation[index].specie,
+      tag: this.data.allAnimalInformation[index].tag
+    });
   },
 
   /**
