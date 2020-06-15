@@ -4,7 +4,6 @@
     "pages/collection/collection",
     "pages/flower/flower",
     "pages/radish/radish",
-
     "pages/amimalDetail/animalDetail"
   ],
   "window":{
@@ -17,19 +16,27 @@
     "list": [
       {
         "pagePath": "pages/animal/animal",
-        "text": "岛民"
+        "text": "岛民",
+        "iconPath": "img/人物-名片.png",
+        "selectedIconPath": "img/人物看板.png"
       },
       {
         "pagePath": "pages/collection/collection",
-        "text": "收集品"
+        "text": "收集品",
+        "iconPath": "img/List.png",
+        "selectedIconPath": "img/列表.png"
       },
       {
         "pagePath": "pages/flower/flower",
-        "text": "花朵杂交"
+        "text": "花朵杂交",
+        "iconPath": "img/FlowerUS.png",
+        "selectedIconPath": "img/FlowerS.png"
       },
       {
         "pagePath": "pages/radish/radish",
-        "text": "大头菜"
+        "text": "大头菜",
+        "iconPath": "img/vegetableUS.png",
+        "selectedIconPath": "img/vegetableS.png"
       }
     ]
   },
