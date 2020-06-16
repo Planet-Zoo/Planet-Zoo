@@ -14,6 +14,18 @@ Page({
       {
         name: "西施惠",
         description: "外表温柔却内心叛逆的美少女",
+      },
+      {
+        name: "狸克",
+        description: "无人岛的创始人之一",
+      },
+      {
+        name: "豆狸&粒狸",
+        description: "活力四射的双胞胎兄弟",
+      },
+      {
+        name: "傅达",
+        description: "无人岛博物馆馆长",
       }
     ]
   },

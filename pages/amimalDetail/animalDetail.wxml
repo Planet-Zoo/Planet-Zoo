@@ -7,9 +7,13 @@
       <view>[性别] {{sex}}</view>
       <view>[种族] {{specie}}</view>
       <view>[口头禅] {{tag}}</view>
+      <view>[生日] {{birthday}}</view>
     </view>
   </view>
   <view>
-    
+    <view class="simpleTitle2"><text class="titleText">工作履历</text></view>
+    <view class="storyWrapper"> {{workExpe}}</view>
+    <view class="simpleTitle2"><text class="titleText">趣闻轶事</text></view>
+    <view class="storyWrapper"> {{funStory}}</view>
   </view>
 </view>

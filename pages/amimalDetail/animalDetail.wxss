@@ -29,6 +29,20 @@
   background-color: gray;
 }
 
+.simpleTitle2{
+  margin-top: 30rpx;
+  width: 660rpx;
+  height: 40rpx;
+  border-radius: 10rpx;
+  background-color: gray;
+}
+
+.storyWrapper{
+  margin-top: 10rpx;
+  width: 660rpx;
+}
+
 .titleText{
+  margin-left: 10rpx;
   color: white;
 }
