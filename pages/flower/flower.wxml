@@ -1,12 +1,21 @@
 <view class="section">
-  <view class="section__title">选择花朵</view>
+<view class="cu-bar bg-white">
+  <view class="action">
+    <text class="cuIcon-activityfill "></text> 花朵杂交
+  </view>
+</view>
   <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{flowerIndex}}" range="{{flowerArray}}">
-    <view class="picker">
-      当前选择：{{flowerArray[0][flowerIndex[0]]}}，{{flowerArray[1][flowerIndex[1]]}}，{{flowerArray[1][flowerIndex[2]]}}
+    <view class="cu-bar bg-white">
+      <view class="picker">
+       <text class="cuIcon-title text-orange"></text>当前选择：{{flowerArray[0][flowerIndex[0]]}}，{{flowerArray[1][flowerIndex[1]]}}，{{flowerArray[1][flowerIndex[2]]}}
+      </view>
     </view>
   </picker>
 </view>
-
-<button bindtap="zajiao">杂交</button>
-
-<view>{{answer}}</view>
+<view class="cu-bar bg-white">
+  <button bindtap="zajiao">杂交</button>
+</view>
+<view class="padding bg-white" wx:for="{{answer}}" wx:key wx:if="{{item.name!='white'}}">
+  <view class="text-{{item.name}} text-center">{{item.title}}</view>
+</view>
+<!-- <view>{{answer}}</view> -->
