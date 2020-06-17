@@ -8,10 +8,6 @@ Page({
     index: 0,
     list:[
       {
-        name: "阿龙",
-        description: "名叫阿龙的小鳄鱼",
-      },
-      {
         name: "西施惠",
         description: "外表温柔却内心叛逆的美少女",
       },
@@ -26,6 +22,22 @@ Page({
       {
         name: "傅达",
         description: "无人岛博物馆馆长",
+      },
+      {
+        name: "傅珂",
+        description: "只有在流星雨夜晚出没的神秘少女",
+      },
+      {
+        name: "幽幽",
+        description: "无比胆小的幽灵",
+      },
+      {
+        name: "K.K.",
+        description: "吸粉无数的偶像歌手",
+      },
+      {
+        name: "薛革",
+        description: "无人岛头号良心摊贩",
       }
     ]
   },

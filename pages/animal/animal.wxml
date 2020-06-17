@@ -9,7 +9,7 @@
 </view>  
 <view class="animalContainer">
   <view wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" class="animal" hover-class="animalPressed" bindtap="along" data-id="{{idx}}">
-    <image class="animalPhoto" src="/img/{{item.name}}.png"></image>
+    <image class="animalPhoto" src="/img/NPC/{{item.name}}.png"></image>
     <view>
       <text class="animalName">{{item.name}}</text>
       <text class="animalShortDescription">{{item.description}}</text>
