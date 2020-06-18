@@ -58,6 +58,38 @@ Page({
       {
         name: "然然",
         description: "经常找不到人的树懒",
+      },
+      {
+        name:"狐利",
+        description: "狸克先生的死对头",
+      },
+      {
+        name: "骆岚",
+        description: "地毯商人",
+      },
+      {
+        name: "吕游",
+        description: "迷迷糊糊的水手",
+      },
+      {
+        name: "俞司廷",
+        description: "钓鱼界的明日之星",
+      },
+      {
+        name:"龙克斯",
+        description:"高价收虫子的“怪人”",
+      },
+      {
+        name:"曹卖",
+        description:"头顶大头菜的活泼少女"
+      },
+      {
+        name:"莫里",
+        description:"渡渡鸟航空公司空少"
+      },
+      {
+        name:"陆德里",
+        description:"渡渡鸟航空公司飞行员",
       }
     ]
   },
