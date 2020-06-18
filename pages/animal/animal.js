@@ -38,6 +38,26 @@ Page({
       {
         name: "薛革",
         description: "无人岛头号良心摊贩",
+      },
+      {
+        name: "巴猎",
+        description: "来自巴猎岛的摄影师",
+      },
+      {
+        name: "麻儿",
+        description: "心灵手巧的裁缝",
+      },
+      {
+        name: "绵儿",
+        description: "服装设计师",
+      },
+      {
+        name: "绢儿",
+        description: "热情的服装店店员",
+      },
+      {
+        name: "然然",
+        description: "经常找不到人的树懒",
       }
     ]
   },
