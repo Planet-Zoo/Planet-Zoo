@@ -1,13 +1,13 @@
 <view class="animalFile">
   <view class="photoTextWrapper">
-    <image class="photo" src="/img/{{name}}.png"></image>
+    <image class="photo" src="https://burger-of-bob.oss-cn-shanghai.aliyuncs.com/%E8%AE%A1%E7%BD%91%E5%B0%8F%E7%A8%8B%E5%BA%8F/NPC/{{name}}.png"></image>
     <view class="textWrapper">
       <view class="simpleTitle1"><text class="titleText">基础档案</text></view>
       <view>[姓名] {{name}}</view>
       <view>[性别] {{sex}}</view>
       <view>[种族] {{specie}}</view>
-      <view>[口头禅] {{tag}}</view>
       <view>[生日] {{birthday}}</view>
+      <view>[工作时间] {{workTime}}</view>
     </view>
   </view>
   <view>

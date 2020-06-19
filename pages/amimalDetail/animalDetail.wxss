@@ -12,26 +12,27 @@
 }
 
 .photo{
-  height: 450rpx;
+  height: 400rpx;
   width: 350rpx;
   border-radius: 40rpx;
-  background-color: rgb(242, 242, 199);
+  background-color: white;
 }
 
 .textWrapper{
   margin-top: 10rpx;
   margin-left: 30rpx;
+  width: 310rpx;
 }
 
 .simpleTitle1{
-  width: 280rpx;
+  width: 310rpx;
   height: 40rpx;
   background-color: gray;
 }
 
 .simpleTitle2{
   margin-top: 30rpx;
-  width: 660rpx;
+  width: 690rpx;
   height: 40rpx;
   border-radius: 10rpx;
   background-color: gray;
@@ -39,7 +40,7 @@
 
 .storyWrapper{
   margin-top: 10rpx;
-  width: 660rpx;
+  width: 690rpx;
 }
 
 .titleText{
