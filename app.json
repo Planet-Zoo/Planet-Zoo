@@ -1,16 +1,17 @@
 {
-  "pages":[
+  "pages": [
     "pages/animal/animal",
     "pages/collection/collection",
     "pages/flower/flower",
     "pages/radish/radish",
-    "pages/amimalDetail/animalDetail"
+    "pages/amimalDetail/animalDetail",
+    "pages/colletionDetail/colletionDetail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
@@ -43,6 +44,6 @@
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-    "cu-custom":"/colorui/components/cu-custom"
+    "cu-custom": "/colorui/components/cu-custom"
   }
 }

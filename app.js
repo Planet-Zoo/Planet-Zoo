@@ -35,6 +35,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    animalIndex: 0
+    animalIndex: 0,
+    category : "",
+    detailIndex : 0, 
   }
 })

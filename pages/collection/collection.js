@@ -5,7 +5,58 @@ Page({
    * 页面的初始数据
    */
   data: {
+    category:["鱼类","昆虫","化石","艺术品"],
+    tabCur : 0,
+    fishList:[
+      {
+        name:"红目鲫",
+        price:900
+      }
+    ],
+    insectList:[
+      {
+        name:"白粉蝶",
+        price:160
+      },
+    ],
+    fossilList:[
 
+    ],
+    artList:[
+
+    ]
+
+
+
+  },
+
+  tabSelect(e){
+    this.setData({
+      tabCur:e.currentTarget.dataset.id ,
+    })
+  },  
+  toDetail(e){
+    var app=getApp()
+    var c = e.currentTarget.dataset.category
+    var index = e.currentTarget.dataset.id
+    app.globalData.index= index
+    switch(c){
+      case "insect":
+        app.globalData.category = "insect"
+        break
+      case "fish":
+        app.globalData.category = "fish"
+        break
+      case "fossil":
+        app.globalData.category = "fossil"
+        break
+      case "art":
+        app.globalData.category = "art"
+        break
+    }
+    wx.navigateTo({
+      url: '/pages/colletionDetail/colletionDetail',
+    })
   },
 
   /**
