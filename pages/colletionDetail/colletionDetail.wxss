@@ -1,0 +1,11 @@
+/* pages/colletionDetail/colletionDetail.wxss */
+.box{
+  margin: 20rpx 20rpx 20rpx 20rpx;
+}
+
+.myimage {
+ 
+  width: 10em;
+  height: 10em;
+  text-align: center;
+}

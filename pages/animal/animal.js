@@ -100,5 +100,7 @@ Page({
     wx.navigateTo({
       url: '/pages/amimalDetail/animalDetail',
     })
-  }
+  },
+
+  
 })

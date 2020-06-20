@@ -9,6 +9,8 @@ Page({
       title:'无法杂交',
       name:'gray'
     }],
+    FlowerChoose: ["波斯菊", "菊花", "玫瑰", "银莲花", "郁金香", "三色堇", "风信子", "百合"],
+    idx:0,
     flowerArray: [
       ["波斯菊", "菊花", "玫瑰", "银莲花", "郁金香", "三色堇", "风信子", "百合"],
       ["红色", "黄色", "白色", "橙色", "粉色", "黑色"],
@@ -46,7 +48,7 @@ Page({
         {
           id: 7,
           name: "百合"
-        },
+        }
       ],
       [{
           id: 0,
@@ -101,6 +103,22 @@ Page({
       ],
     ],
     flowerIndex: [0, 0, 0],
+  },
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
+  bindPickerChange: function(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      idx: e.detail.value
+    })
   },
   bindMultiPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
