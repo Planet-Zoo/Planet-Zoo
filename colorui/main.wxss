@@ -685,7 +685,7 @@ radio.white[checked] .wx-radio-input {
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
-	padding: 0 30rpx;
+	padding: 0 0rpx;
 	font-size: 28rpx;
 	height: 64rpx;
 	line-height: 1;

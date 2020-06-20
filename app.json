@@ -18,26 +18,26 @@
       {
         "pagePath": "pages/animal/animal",
         "text": "NPC",
-        "iconPath": "img/人物-名片.png",
-        "selectedIconPath": "img/人物看板.png"
+        "iconPath": "img/NPC.png",
+        "selectedIconPath": "img/NPCS.png"
       },
       {
         "pagePath": "pages/collection/collection",
         "text": "收集品",
-        "iconPath": "img/List.png",
-        "selectedIconPath": "img/列表.png"
+        "iconPath": "img/列表未选.png",
+        "selectedIconPath": "img/列表选择.png"
       },
       {
         "pagePath": "pages/flower/flower",
         "text": "花朵杂交",
-        "iconPath": "img/FlowerUS.png",
-        "selectedIconPath": "img/FlowerS.png"
+        "iconPath": "img/花.png",
+        "selectedIconPath": "img/花选.png"
       },
       {
         "pagePath": "pages/radish/radish",
         "text": "大头菜",
-        "iconPath": "img/vegetableUS.png",
-        "selectedIconPath": "img/vegetableS.png"
+        "iconPath": "img/萝卜未选中.png",
+        "selectedIconPath": "img/萝卜选中.png"
       }
     ]
   },

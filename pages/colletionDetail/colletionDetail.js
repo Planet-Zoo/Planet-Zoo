@@ -1557,14 +1557,7 @@ Page({
         isFake:"有",
         feat:"赝品是八字眉毛，真品眉毛向内",
         type:"画",
-        }, 
-        {
-        name:"厉害的名画",
-        realName:"苹果与橘子",
-        isFake:"无",
-        feat:"无",
-        type:"画",
-        }, 
+        },  
         {
         name:"美丽的雕塑",
         realName:"断臂维纳斯",

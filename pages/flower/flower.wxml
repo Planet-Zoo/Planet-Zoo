@@ -1,7 +1,7 @@
 <view class="section">
 <view class="cu-bar bg-white">
   <view class="action">
-    <text class="cuIcon-activityfill "></text> 花朵杂交
+    <text class="cuIcon-activityfill "></text> 花朵杂交选择器
   </view>
 </view>
   <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{flowerIndex}}" range="{{flowerArray}}">
@@ -13,9 +13,154 @@
   </picker>
 </view>
 <view class="cu-bar bg-white">
-  <button bindtap="zajiao">杂交</button>
+  <button class="cu-btn bg-green round" bindtap="zajiao">杂交</button>
 </view>
 <view class="padding bg-white" wx:for="{{answer}}" wx:key wx:if="{{item.name!='white'}}">
   <view class="text-{{item.name}} text-center">{{item.title}}</view>
+</view>
+
+<view class="section">
+  <view class="cu-bar bg-white">
+    <view class="action">
+     <text class="cuIcon-discoverfill "></text> 花朵全部杂交情况查看
+    </view>
+  </view>
+  <picker bindchange="bindPickerChange" value="{{idx}}" range="{{FlowerChoose}}">
+    <view class="picker">
+      <text class="cuIcon-title text-black"></text>当前选择：{{FlowerChoose[idx]}}
+    </view>
+  </picker>
+</view>
+
+<view class="cu-bar bg-white ">
+    <button class="cu-btn bg-blue round " bindtap="showModal" data-target="{{FlowerChoose[idx]}}">查看全部杂交情况</button>
+</view>
+
+
+<view class="cu-modal {{modalName=='波斯菊'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://test-20200309.oss-cn-beijing.aliyuncs.com/%E8%8A%B1/%E6%B3%A2%E6%96%AF%E8%8F%8A.png');height:250px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-modal {{modalName=='菊花'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://test-20200309.oss-cn-beijing.aliyuncs.com/%E8%8A%B1/%E8%8F%8A%E8%8A%B1.png');height:250px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-modal {{modalName=='玫瑰'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://test-20200309.oss-cn-beijing.aliyuncs.com/%E8%8A%B1/%E7%8E%AB%E7%91%B0.png');height:250px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-modal {{modalName=='银莲花'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://test-20200309.oss-cn-beijing.aliyuncs.com/%E8%8A%B1/%E9%93%B6%E8%8E%B2%E8%8A%B1.png');height:250px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-modal {{modalName=='郁金香'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://test-20200309.oss-cn-beijing.aliyuncs.com/%E8%8A%B1/%E9%83%81%E9%87%91%E9%A6%99.png');height:250px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-modal {{modalName=='三色堇'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://test-20200309.oss-cn-beijing.aliyuncs.com/%E8%8A%B1/%E4%B8%89%E8%89%B2%E5%A0%87.png');height:250px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-modal {{modalName=='风信子'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://test-20200309.oss-cn-beijing.aliyuncs.com/%E8%8A%B1/%E9%A3%8E%E4%BF%A1%E5%AD%90.png');height:250px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="cu-modal {{modalName=='百合'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="bg-img" style="background-image: url('https://test-20200309.oss-cn-beijing.aliyuncs.com/%E8%8A%B1/%E7%99%BE%E5%90%88.png');height:250px;">
+      <view class="cu-bar justify-end text-white">
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close "></text>
+        </view>
+      </view>
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
+    </view>
+  </view>
 </view>
 <!-- <view>{{answer}}</view> -->
