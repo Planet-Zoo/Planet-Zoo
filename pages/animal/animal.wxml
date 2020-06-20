@@ -1,12 +1,10 @@
-<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}rpx;">
-  <view class="search-form round">
-    <text class="cuIcon-search"></text>
-    <input type="text" placeholder="输入搜索的关键词" confirm-type="search"></input>
-  </view>
-  <view class="action">
-    <button class="cu-btn bg-gradual-green shadow-blur round">搜索</button>
-  </view>
-</view>  
+<view class="cu-bar justify-center bg-white">
+    <view class="action sub-title">
+      <text class="text-xl text-bold text-green">无人岛NPC一览</text>
+      <text class="bg-green" style="width:5rem"></text>
+      <!-- last-child选择器-->
+    </view>
+</view>
 <view class="animalContainer">
   <view wx:for="{{list}}" wx:for-item="item" wx:for-index="idx" class="animal" hover-class="animalPressed" bindtap="along" data-id="{{idx}}">
     <image class="animalPhoto" src="https://burger-of-bob.oss-cn-shanghai.aliyuncs.com/%E8%AE%A1%E7%BD%91%E5%B0%8F%E7%A8%8B%E5%BA%8F/NPC/{{item.name}}.png"></image>
