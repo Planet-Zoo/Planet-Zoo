@@ -30,7 +30,7 @@
       </view>
     </view>
 
-    <view class="cu-item">
+    <view class="cu-item" wx:if="{{category=='insect'}}">
       <view class="content">
         <text class="cuIcon-attentionfill text-red"></text>
         <text class="text-grey">出现条件</text>
