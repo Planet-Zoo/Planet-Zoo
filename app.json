@@ -17,7 +17,7 @@
     "list": [
       {
         "pagePath": "pages/animal/animal",
-        "text": "岛民",
+        "text": "NPC",
         "iconPath": "img/人物-名片.png",
         "selectedIconPath": "img/人物看板.png"
       },
