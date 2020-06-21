@@ -1,7 +1,7 @@
 /* pages/animal/animal.wxss */
 
 .animalContainer{
-  margin-top:15rpx;
+  margin-top:5rpx;
   margin-left: 20rpx;
   margin-right: 20rpx;
 }
@@ -12,7 +12,7 @@
   height: 150rpx;
   width: 710rpx;
   border-radius: 20rpx;
-  background-color: whitesmoke;
+  background-color: white;
 }
 
 .animalPressed{
@@ -46,10 +46,6 @@
   font-size: 28rpx;
   display: flex;
   color: grey;
-}
-
-page {
-  padding-top: 100rpx;
 }
 
 .indexes {

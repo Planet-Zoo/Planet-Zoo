@@ -19,7 +19,6 @@
 }
 
 .textWrapper{
-  margin-top: 10rpx;
   margin-left: 30rpx;
   width: 310rpx;
 }
@@ -27,7 +26,8 @@
 .simpleTitle1{
   width: 310rpx;
   height: 40rpx;
-  background-color: gray;
+  border-radius: 10rpx;
+  background-color: lightcyan;
 }
 
 .simpleTitle2{
@@ -35,15 +35,13 @@
   width: 690rpx;
   height: 40rpx;
   border-radius: 10rpx;
-  background-color: gray;
+  background-color: lightcyan;
 }
 
-.storyWrapper{
-  margin-top: 10rpx;
-  width: 690rpx;
+.storyText{
+  font-size: 30rpx;
 }
 
 .titleText{
   margin-left: 10rpx;
-  color: white;
 }
