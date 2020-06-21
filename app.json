@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/loadAnimation/loadAnimation",
     "pages/animal/animal",
     "pages/collection/collection",
     "pages/flower/flower",
@@ -10,7 +11,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "动森图鉴",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

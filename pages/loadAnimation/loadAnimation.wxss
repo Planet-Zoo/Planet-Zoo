@@ -1,0 +1,9 @@
+.welcome{
+  margin-top: 75rpx;
+  margin-bottom: 100rpx;
+  margin-left: 150rpx;
+  width: 450rpx;
+  height: 280rpx;
+  display: flex;
+  justify-content: center;
+}
