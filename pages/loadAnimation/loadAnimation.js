@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    myTimer: '',
     height: 0
   },
 
@@ -16,7 +17,7 @@ Page({
       height: wx.getSystemInfoSync().windowHeight+48
     })
     console.log(this.data.height)
-    setInterval(function(){
+    this.data.myTimer =setInterval(function(){
       wx.switchTab({
         url: '/pages/animal/animal',
       })
@@ -41,13 +42,16 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log("离开")
+    clearInterval(this.data.myTimer)
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    console.log("离开")
+    clearInterval(this.data.myTimer)
   },
 
   /**
