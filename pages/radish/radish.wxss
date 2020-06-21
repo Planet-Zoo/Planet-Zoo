@@ -1,6 +1,122 @@
-/* pages/radish/radish.wxss */
+.all{
+  background-color: white;
+  width: 700rpx;
+  border-radius: 4px;
+  margin: 30rpx 25rpx 25rpx 25rpx;
+}
+.title{
+  width: 600rpx;
+  display: flex;
+  color: grey;
+  font-size: 35rpx;
+  justify-content: center;
+  padding-left: 50rpx;
+  padding-top: 60rpx;
+  margin-bottom: 50rpx;
+  font-weight: 800;
+}
+.day{
+  display: flex;
+  height: 60rpx;
+  margin-top: 20rpx;
+}
+.word{
+  font-size: 30rpx;
+  width: 200rpx;
+  margin-left: 20rpx;
+  color:  rgb(71, 80, 130);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 input{
-  border: 1px solid blue;
-  display: inline-flex;
-  width: 740rpx;
+  color: rgb(34, 206, 77);
+  width: 200rpx;
+  border: rgb(210, 216, 214);
+  border-radius: 6px;
+  border-style: solid;
+  height: 60rpx;
+}
+.time{
+  margin-top: 20rpx;
+  display: flex;
+}
+.blank{
+  width: 200rpx;
+}
+.botton_group{
+  height: 60rpx;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  display: flex;
+}
+.reset{
+  padding-left: 50rpx;
+  border-radius: 8rpx;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(23, 28, 51, 0.714);
+  background-size: 100rpx,60rpx;
+  font-size: 30rpx;
+  font-weight: 200;
+  color: white;
+}
+.pridict{
+  padding-left: 50rpx;
+  border-radius: 8rpx;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(36, 206, 45, 0.714);
+  background-size: 100rpx,60rpx;
+  font-size: 30rpx;
+  font-weight: 200;
+  color: white;
+}
+.btn-hover{
+  background-color: black;
+}
+.none{
+  height: 10rpx;
+}
+.pridicttitle{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+  color: rgb(71, 80, 130);
+  font-size: 25rpx;
+}
+.little_block{
+  color: rgb(71, 80, 130);
+  font-size: 25rpx;
+  padding-left: 50rpx;
+  padding-bottom: 30rpx;
+  display: flex;
+}
+.little_result{
+  color: rgb(71, 80, 130);
+  font-size: 25rpx;
+  padding-left: 15rpx;
+}
+.suggest{
+  color: rgb(71, 80, 130);
+  font-size: 25rpx;
+  padding-left: 50rpx;
+  padding-bottom: 10rpx;
+}
+.suggestlist{
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  font-size: 25rpx;
+  color: rgb(71, 80, 130);
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  padding-left: 70rpx;
+  padding-bottom: 10rpx;
+  padding-right: 0rpx;
 }

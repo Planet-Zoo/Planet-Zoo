@@ -1,4 +1,73 @@
-<view>输入大头菜价格</view>
-<input></input>
-<button>价格预测</button>
-<view>下面输出个结果啥的</view>
+<view class="all">
+   <view> 
+     <text class="title">大头菜一周价格信息</text>
+   </view>
+   <view class="day">
+      <text class="word">周日买入价</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[0].price}}" data-operation="{{0}}"></input>
+   </view>
+   <view class="time">
+      <text class="blank"></text>
+      <text class="word">上午</text>
+      <text class="word">下午</text>
+   </view>
+   <view class="day">
+      <text class="word">周一</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[1].price}}" data-operation="{{1}}"></input>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[2].price}}" data-operation="{{2}}"></input>
+   </view>
+   <view class="day">
+      <text class="word">周二</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[3].price}}" data-operation="{{3}}"></input>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[4].price}}" data-operation="{{4}}"></input>
+   </view>
+   <view class="day">
+      <text class="word">周三</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[5].price}}" data-operation="{{5}}"></input>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[6].price}}" data-operation="{{6}}"></input>
+   </view>
+   <view class="day">
+      <text class="word">周四</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[7].price}}" data-operation="{{7}}"></input>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[8].price}}" data-operation="{{8}}"></input>
+   </view>
+   <view class="day">
+      <text class="word">周五</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[9].price}}" data-operation="{{9}}"></input>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[10].price}}" data-operation="{{10}}"></input>
+   </view>
+   <view class="day">
+      <text class="word">周六</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[11].price}}" data-operation="{{11}}"></input>
+      <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;</text>
+      <input type="number" bindinput="inputtime" value="{{alltime[12].price}}" data-operation="{{12}}"></input>
+   </view>
+   <view class="botton_group">
+      <button class="reset" hover-class="btn-hover" style="width: 200rpx; hight:60rpx;margin-left:70rpx;" bindtap="reset">重置</button>
+      <button class="pridict" hover-class="btn-hover" style="width: 200rpx; hight:60rpx;margin-left:70rpx;" bindtap="pridict">预测</button>
+   </view>
+   <view class="none"></view>
+</view>
+<view class="all" wx:if="{{ispridict}}">
+   <view class='pridicttitle'>预测结果（仅供参考）</view>
+   <view class="result">
+     <view class="little_block">时间预测点： {{pridicttime}}</view>
+     <view class="little_block">预测趋势:
+         <view class="little_result" wx:if="{{downtype}}">连续下跌型</view>
+         <view class="little_result" wx:if="{{wavetype}}">波动型</view>
+         <view class="little_result" wx:if="{{threestagetype}}">三期增长型</view>
+         <view class="little_result" wx:if="{{fourstagetype}}">四期增长型</view>
+     </view>
+     <view class="suggest">建议：
+     </view>
+     <view class="suggestlist" wx:if="{{downtype}}">连续下跌型： 会一直呈下跌趋势，如果确定趋势建议早点出手</view>
+     <view class="suggestlist" wx:if="{{wavetype}}">波动型： 建议在第一次下跌以后出现的0.9倍或1.4倍买入价出手</view>
+     <view class="suggestlist" wx:if="{{threestagetype}}">三期增长型： 如果没有达到顶峰（2~6倍）可以等到峰值出手，如果以达到，请尽快出手~</view>
+     <view class="suggestlist" wx:if="{{fourstagetype}}">四期增长型： 如果出现涨点，可以在1.4倍到1.9倍出手，如已经在达到涨点后下跌，请尽快出手~</view>
+   </view>
+</view>
