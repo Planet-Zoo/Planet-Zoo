@@ -1,11 +1,10 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
+	"miniprogramRoot": "AnimalCrossing/",
+	"cloudfunctionRoot": "cloudfunctions/",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
+		"enhance": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": true,
@@ -25,14 +24,9 @@
 		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
-	"compileType": "miniprogram",
-	"libVersion": "2.11.1",
-	"appid": "wxeb906e6620b0e402",
-	"projectname": "%E6%86%A8%E6%86%A8%E5%9B%BE%E9%89%B4",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
-	"isGameTourist": false,
+	"appid": "wx07cb146a86b6bb40",
+	"projectname": "Animal%20Crossing",
+	"libVersion": "2.8.1",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -49,22 +43,15 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 0,
 			"list": [
 				{
-					"id": 0,
-					"name": "pages/flower/flower",
-					"pathName": "pages/flower/flower",
-					"query": "",
-					"scene": null
+					"id": -1,
+					"name": "db guide",
+					"pathName": "pages/databaseGuide/databaseGuide"
 				}
 			]
 		}

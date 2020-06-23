@@ -1,8 +1,0 @@
-{
-  "usingComponents": {},
-  "backgroundTextStyle":"light",
-  "backgroundColor": "green",
-  "navigationBarBackgroundColor": "#00FF00",
-  "navigationBarTitleText": "大头菜价格预测趋势",
-  "navigationBarTextStyle":"white"
-}

@@ -1,0 +1,53 @@
+<!--pages/colletionDetail/colletionDetail.wxml-->
+<view class="cu-list menu card-menu margin-top">
+<view class="cu-card case no-card">
+  <view class = "cu-item">
+   <view class="image">
+    <image src = "https://hotel-booking-system.oss-cn-beijing.aliyuncs.com/Wechat/{{name}}.png" mode = "widthFix"> </image>
+      </view>
+   </view>
+</view>
+</view>
+<view >
+<view class="cu-list menu card-menu margin-top">
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-tag text-grey"></text>
+        <text class="text-grey">名称</text>
+      </view>
+      <view class="action">
+        <text class="text-grey text-df">{{name}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+      <view class="content">
+        <text class="cuIcon-text text-olive"></text>
+        <text class="text-grey">真名</text>
+      </view>
+     <view class="action">
+        <text class="text-grey text-df">{{realName}}</text>
+      </view>
+    </view>
+    <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-similar text-red"></text>
+          <text class="text-grey">有无赝品</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-df">{{hasFake}}</text>
+        </view>
+    </view>
+    <view class="cu-item">
+        <view class="content">
+          <text class="cuIcon-newsfill text-blue"></text>
+          <text class="text-grey">赝品特征</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-df">{{fakeFeat}}</text>
+        </view>
+    </view>
+  </view>
+  
+
+
+</view>
