@@ -15,8 +15,26 @@ Page({
     hemisphere:"查看北半球",
     month:[false,false,false,false,false,false,false,true,true,true,true,true],
     category:"",
-    index:0,
-  
+    checked:""
+  },
+  switchOwn(e){
+    var isChange = e.detail.value
+    this.setData({
+      checked:isChange
+    })
+    var that = this
+    wx.cloud.callFunction({
+      name:"changeOwn",
+      data:{
+        name:that.data.name,
+        own:that.data.checked
+      },
+      success:function(res){
+        console.log(res)
+      },
+      fail:console.error
+    })
+    
   },
   change(e) {
     if(this.data.hemisphere=="查看北半球"){
@@ -59,6 +77,7 @@ Page({
       },
       success:function(res){
         
+        
         tempList=res.result.detail.data
         that.setData({
           category:tempList[0].type
@@ -97,6 +116,21 @@ Page({
       },
       fail:console.error
     })
+    wx.cloud.callFunction({
+      name:"checkOwn",
+      data:{
+        name:that.data.checkName
+      },
+      success:function(res){
+      
+        that.setData({
+          checked:res.result.exist
+        })
+        
+      },
+      fail:console.error
+    })
+    
   
    
    

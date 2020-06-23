@@ -9,3 +9,21 @@
   height: 10em;
   text-align: center;
 }
+
+.switch-own::after {
+	content: "有";
+}
+
+.switch-own::before {
+	content: "无";
+}
+
+.switch-own .wx-switch-input {
+	background: var(--red) !important;
+	border-color: var(--red) !important;
+}
+
+.switch-own[checked] .wx-switch-input {
+	background: var(--blue) !important;
+	border-color: var(--blue) !important;
+}

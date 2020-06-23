@@ -81,48 +81,14 @@
         <text class="text-grey text-df">{{requirement}}</text>
       </view>
     </view>
-</view>
-</view>
-<view wx:if="{{category=='art'}}">
-<view class="cu-list menu card-menu margin-top">
     <view class="cu-item">
       <view class="content">
-        <text class="cuIcon-tag text-grey"></text>
-        <text class="text-grey">名称</text>
+          <text class="cuIcon-clothesfill text-grey "></text> 
+          <text class="text-grey">是否拥有</text>
       </view>
       <view class="action">
-        <text class="text-grey text-df">{{name}}</text>
+        <switch class="switch-own lg" bindchange="switchOwn" checked="{{checked}}"></switch>
       </view>
     </view>
-    <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-text text-olive"></text>
-        <text class="text-grey">真名</text>
-      </view>
-     <view class="action">
-        <text class="text-grey text-df">{{realName}}</text>
-      </view>
-    </view>
-    <view class="cu-item">
-        <view class="content">
-          <text class="cuIcon-similar text-red"></text>
-          <text class="text-grey">有无赝品</text>
-        </view>
-        <view class="action">
-          <text class="text-grey text-df">{{hasFake}}</text>
-        </view>
-    </view>
-    <view class="cu-item">
-        <view class="content">
-          <text class="cuIcon-newsfill text-blue"></text>
-          <text class="text-grey">赝品特征</text>
-        </view>
-        <view class="action">
-          <text class="text-grey text-df">{{fakeFeat}}</text>
-        </view>
-    </view>
-  </view>
-  
-
-
+</view>
 </view>

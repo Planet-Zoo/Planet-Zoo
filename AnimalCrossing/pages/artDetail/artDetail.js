@@ -10,19 +10,32 @@ Page({
     realName:"",
     category:"",
     index:0,
+    checked:false
+  },
+  switchOwn(e){
+    var isChange = e.detail.value
+    this.setData({
+      checked:isChange
+    })
+    var that = this
+    wx.cloud.callFunction({
+      name:"changeOwn",
+      data:{
+        name:that.data.name,
+        own:that.data.checked
+      },
+      success:function(res){
+        console.log(res)
+      },
+      fail:console.error
+    })
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
     var that = this
     var app=getApp()
     this.setData({
@@ -50,6 +63,14 @@ Page({
       fail:console.error
     })
 
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+   
   },
 
   /**
